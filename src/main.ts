@@ -18,7 +18,8 @@ async function bootstrap() {
 
   // ✅ Config PORT từ .env
   const port = process.env.PORT || 3000;
-
+  // Set global prefix
+  app.setGlobalPrefix("api/v1");
   await app.listen(port);
   Logger.log(`🚀 Server running on http://localhost:${port}`, "Bootstrap");
   Logger.log(`📚 Swagger Docs: http://localhost:${port}/docs`, "Swagger");

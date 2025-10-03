@@ -1,7 +1,7 @@
 import { Controller, Get } from "@nestjs/common";
 import { VipService } from "./vip.service";
 
-@Controller("vip-levels")
+@Controller("api/v1/vip-levels")
 export class VipController {
   constructor(private readonly vipService: VipService) {}
 
