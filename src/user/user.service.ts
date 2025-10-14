@@ -9,7 +9,7 @@ export class UserService {
         fullname: fakerVI.person.fullName(),
         username,
         phone: fakerVI.helpers.arrayElement([true, false]),
-        vip: fakerVI.helpers.arrayElement(["VIP0", "VIP1", "VIP2", "VIP3"]),
+        vip: `VIP${fakerVI.number.int({ min: 0, max: 100 }).toString().padStart(2, "0")}`,
         deposits: null,
       },
       message: "Thành công",
