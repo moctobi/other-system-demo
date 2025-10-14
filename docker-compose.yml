@@ -1,0 +1,19 @@
+services:
+  other-system-demo:
+    image: david8386/other-system-demo
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: other-system-demo
+    ports:
+      - 4505:4505
+    restart: unless-stopped
+    environment:
+      - PORT=4505
+    networks:
+      - klive-network
+
+networks:
+  klive-network:
+    external: true
+    name: klive-network
